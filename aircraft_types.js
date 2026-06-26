@@ -48,6 +48,7 @@ const AIRCRAFT_TYPES = {
   "E290": ["L","M","J"], "E295": ["L","M","J"], "E35L": ["L","M","J"],
   "E50P": ["L","L","J"], "E55P": ["L","L","J"], "E75L": ["L","M","J"],
   "E75S": ["L","M","J"], "EA50": ["L","L","J"], "EMB1": ["L","M","T"],
+  "E545": ["L","M","J"], "E550": ["L","M","J"],
   // ===== BOMBARDIER / CANADAIR / de HAVILLAND =====
   "BE10": ["L","M","T"], "BE20": ["L","M","T"], "BE30": ["L","M","T"],
   "BE40": ["L","M","J"], "BE9L": ["L","M","T"], "BE9T": ["L","M","T"],
@@ -165,6 +166,11 @@ const AIRCRAFT_TYPES = {
   "IL18": ["L","H","T"], "IL62": ["L","H","J"], "IL76": ["L","H","J"],
   "IL86": ["L","H","J"], "IL96": ["L","H","J"], "TU134":["L","M","J"],
   "TU154":["L","H","J"], "TU204":["L","H","J"],
+  // ===== ADDED 34.08 (common types missing from DB) =====
+  "BCS1": ["L","M","J"], "BCS3": ["L","M","J"], "GLF4": ["L","M","J"],
+  "GLF5": ["L","M","J"], "GLF6": ["L","M","J"], "PC24": ["L","M","J"],
+  "HDJT": ["L","L","J"], "C55B": ["L","L","J"], "GA5C": ["L","M","J"],
+  "PRM1": ["L","L","J"],
   // ===== MISC =====
   "BALL": ["L","L","P"], "GLID": ["L","L","E"], "ULAC": ["L","L","P"],
   "ZZZZ": ["L","M","J"]
