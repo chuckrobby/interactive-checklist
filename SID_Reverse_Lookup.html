@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KFLL SID Reverse Lookup</title>
+<style>
+  :root {
+    --bg: #0b1622;
+    --panel: #12202f;
+    --edge: #1f3a52;
+    --ink: #d6e4f0;
+    --dim: #6f8aa3;
+    --scope: #38e08b;
+    --scope-dim: #1d6b45;
+    --amber: #f5b13d;
+    --miss: #e0556b;
+    --mono: 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--mono);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+  }
+  .frame {
+    width: 100%;
+    max-width: 560px;
+  }
+  h1 {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--scope);
+    text-transform: uppercase;
+    margin: 0 0 2px;
+  }
+  .sub {
+    font-size: 11px;
+    color: var(--dim);
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+  .inputrow {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  input {
+    flex: 1;
+    background: var(--panel);
+    border: 1px solid var(--edge);
+    color: var(--ink);
+    font-family: var(--mono);
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 12px 14px;
+    border-radius: 4px;
+    outline: none;
+  }
+  input:focus { border-color: var(--scope); }
+  input::placeholder { color: var(--dim); letter-spacing: 2px; }
+  button {
+    background: var(--scope-dim);
+    border: 1px solid var(--scope);
+    color: var(--scope);
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0 18px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover { background: var(--scope); color: var(--bg); }
+  #out {
+    min-height: 60px;
+    margin-bottom: 8px;
+  }
+  .hit {
+    background: var(--panel);
+    border: 1px solid var(--edge);
+    border-left: 3px solid var(--scope);
+    border-radius: 4px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .hit .sid { color: var(--scope); font-weight: 700; }
+  .hit .arrow { color: var(--dim); margin: 0 8px; }
+  .hit .trans { color: var(--ink); }
+  .multi-note { font-size: 11px; color: var(--amber); letter-spacing: 1px; margin: -2px 0 10px 2px; }
+  .miss {
+    border-left-color: var(--miss);
+    color: var(--miss);
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .ref {
+    margin-top: 28px;
+    border-top: 1px solid var(--edge);
+    padding-top: 16px;
+  }
+  .ref summary {
+    cursor: pointer;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--dim);
+    text-transform: uppercase;
+  }
+  .ref table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 12px; }
+  .ref td { padding: 4px 6px; border-bottom: 1px solid var(--edge); vertical-align: top; }
+  .ref td:first-child { color: var(--scope); white-space: nowrap; width: 90px; }
+  .ref td:last-child { color: var(--dim); }
+</style>
+</head>
+<body>
+<div class="frame">
+  <h1>KFLL SID Reverse Lookup</h1>
+  <div class="sub">ENTER TRANSITION FIX &middot; RETURNS MATCHING SID</div>
+
+  <div class="inputrow">
+    <input id="q" placeholder="e.g. COREA" autocomplete="off" autofocus>
+    <button id="go">LOOKUP</button>
+  </div>
+
+  <div id="out"></div>
+
+  <details class="ref">
+    <summary>SID / Transition Reference</summary>
+    <table id="reftable"></table>
+  </details>
+</div>
+
+<script>
+const SIDS = {
+  "GLADZ4": ["BAGGS","GLADZ","SHAQQ","LULLS"],
+  "FRSBE2": ["WAPOM","FRSBE"],
+  "HROCK2": ["SMELZ","KPASA"],
+  "BNICE2": ["DOLIE","COREA","MERKS"],
+  "DORRL2": ["DORRL","MATLK","ONEWY"],
+  "LIFRR2": ["BAIRN","WIXED","BOBOE"],
+  "AGERS1": ["DUCEN","AGERS"],
+  "FEALX2": ["WOLFO","ZFP","PADUS","ETECK","SNAGY","SUMRS","FEALX"],
+  "REGAE2": ["URSUS","REGAE"],
+  "SNAPR2": ["SNAPR","SUMAC","RAJAY"],
+  "MAYNR3": ["MAYNR","CANOA","MAXIM","FUNDI"]
+};
+
+// Build reverse index: transition -> [sids]
+const REV = {};
+for (const [sid, trans] of Object.entries(SIDS)) {
+  for (const t of trans) {
+    (REV[t] = REV[t] || []).push(sid);
+  }
+}
+
+function lookup() {
+  const q = document.getElementById('q').value.trim().toUpperCase();
+  const out = document.getElementById('out');
+  out.innerHTML = '';
+  if (!q) return;
+
+  const hits = REV[q];
+  if (!hits) {
+    out.innerHTML = `<div class="hit miss">NO MATCH &mdash; "${q}" is not a coded transition.</div>`;
+    return;
+  }
+  hits.forEach(sid => {
+    const div = document.createElement('div');
+    div.className = 'hit';
+    div.innerHTML = `<span class="sid">${sid}</span><span class="arrow">&minus;</span><span class="trans">${q}</span>`;
+    out.appendChild(div);
+  });
+  if (hits.length > 1) {
+    const note = document.createElement('div');
+    note.className = 'multi-note';
+    note.textContent = `\u26a0 "${q}" appears on ${hits.length} SIDs \u2014 verify intended departure.`;
+    out.appendChild(note);
+  }
+}
+
+document.getElementById('go').addEventListener('click', lookup);
+document.getElementById('q').addEventListener('keydown', e => { if (e.key === 'Enter') lookup(); });
+
+// Populate reference table
+const reftable = document.getElementById('reftable');
+for (const [sid, trans] of Object.entries(SIDS)) {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${sid}</td><td>${trans.join('  \u00b7  ')}</td>`;
+  reftable.appendChild(tr);
+}
+</script>
+</body>
+</html>

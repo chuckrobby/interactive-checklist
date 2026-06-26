@@ -1,0 +1,6 @@
+.DS_Store
+clip_captures.log
+__pycache__/
+*.png
+clip_server_backup.py
+patch_server.py

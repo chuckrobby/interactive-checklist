@@ -1,0 +1,2962 @@
+{
+  "cycle": "2606",
+  "results": {
+    "KBOW": {},
+    "KBCT": {
+      "CLMNT": {
+        "chart_name": "CLMNT TWO (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "CLMNT.CLMNT2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CPTAN": {
+        "chart_name": "CPTAN THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "CPTAN.CPTAN3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JESTR": {
+        "chart_name": "JESTR ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "JESTR.JESTR1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAHHI": {
+        "chart_name": "MAHHI THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "MAHHI.MAHHI3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MLB": {
+        "chart_name": "MELBOURNE TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "MLB.MLB2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "STOOP": {
+        "chart_name": "STOOP THREE",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "STOOP.STOOP3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TTYLR": {
+        "chart_name": "TTYLR FOUR",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "TTYLR.TTYLR4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "VUUDU": {
+        "chart_name": "VUUDU ONE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "VUUDU.VUUDU1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MYZNR": {
+        "chart_name": "MYZNR THREE (RNAV)",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "MYZNR3.MYZNR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TURPS": {
+        "chart_name": "TURPS TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "TURPS2.TURPS",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KBKV": {},
+    "KXMR": {
+      "BITHO": {
+        "chart_name": "BITHO SEVEN",
+        "type": "STAR",
+        "revision": 7,
+        "computer_code": "BITHO.BITHO7",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KCOF": {
+      "BITHO": {
+        "chart_name": "BITHO SEVEN",
+        "type": "STAR",
+        "revision": 7,
+        "computer_code": "BITHO.BITHO7",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "OCEAN": {
+        "chart_name": "OCEAN FOUR",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "RIVER": {
+        "chart_name": "RIVER FOUR",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KDAB": {
+      "TTHOR": {
+        "chart_name": "TTHOR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TTHOR.TTHOR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "ROYES": {
+        "chart_name": "ROYES SEVEN",
+        "type": "SID",
+        "revision": 7,
+        "computer_code": "ROYES7.ROYES",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KDED": {
+      "TTHOR": {
+        "chart_name": "TTHOR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TTHOR.TTHOR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KFXE": {
+      "BHHIA": {
+        "chart_name": "BHHIA THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BHHIA.BHHIA3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CPTAN": {
+        "chart_name": "CPTAN THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "CPTAN.CPTAN3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DEKAL": {
+        "chart_name": "DEKAL NINE",
+        "type": "STAR",
+        "revision": 9,
+        "computer_code": "DEKAL.DEKAL9",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DVALL": {
+        "chart_name": "DVALL FOUR",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "DVALL.DVALL4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FORTL": {
+        "chart_name": "FORTL NINE",
+        "type": "STAR",
+        "revision": 9,
+        "computer_code": "FORTL.FORTL9",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JESTR": {
+        "chart_name": "JESTR ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "JESTR.JESTR1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "KYAKS": {
+        "chart_name": "KYAKS THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "KYAKS.KYAKS3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "OLAHS": {
+        "chart_name": "OLAHS THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "OLAHS.OLAHS3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TEEKY": {
+        "chart_name": "TEEKY FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "TEEKY.TEEKY4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TOREZ": {
+        "chart_name": "TOREZ ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "TOREZ.TOREZ1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BNICE": {
+        "chart_name": "BNICE TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "BNICE2.BNICE",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DORRL": {
+        "chart_name": "DORRL TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "DORRL2.DORRL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FEALX": {
+        "chart_name": "FEALX TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FEALX2.FEALX",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FLL": {
+        "chart_name": "FORT LAUDERDALE TWO, CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FLL2.FLL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FRSBE": {
+        "chart_name": "FRSBE TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FRSBE2.FRSBE",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GABOW": {
+        "chart_name": "GABOW TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "GABOW2.GABOW",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HROCK": {
+        "chart_name": "HROCK TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "HROCK2.HROCK",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LIFRR": {
+        "chart_name": "LIFRR TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "LIFRR2.LIFRR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAYNR": {
+        "chart_name": "MAYNR THREE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "MAYNR3.MAYNR",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KFLL": {
+      "BHHIA": {
+        "chart_name": "BHHIA THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BHHIA.BHHIA3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CUUDA": {
+        "chart_name": "CUUDA THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "CUUDA.CUUDA3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DEKAL": {
+        "chart_name": "DEKAL NINE",
+        "type": "STAR",
+        "revision": 9,
+        "computer_code": "DEKAL.DEKAL9",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DVALL": {
+        "chart_name": "DVALL FOUR",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "DVALL.DVALL4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FORTL": {
+        "chart_name": "FORTL NINE",
+        "type": "STAR",
+        "revision": 9,
+        "computer_code": "FORTL.FORTL9",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "KYAKS": {
+        "chart_name": "KYAKS THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "KYAKS.KYAKS3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "OLAHS": {
+        "chart_name": "OLAHS THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "OLAHS.OLAHS3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TARPN": {
+        "chart_name": "TARPN THREE (RNAV)",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TARPN.TARPN3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TEEKY": {
+        "chart_name": "TEEKY FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "TEEKY.TEEKY4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TOREZ": {
+        "chart_name": "TOREZ ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "TOREZ.TOREZ1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "AGERS": {
+        "chart_name": "AGERS ONE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "AGERS1.AGERS",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BNICE": {
+        "chart_name": "BNICE TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "BNICE2.BNICE",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DORRL": {
+        "chart_name": "DORRL TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "DORRL2.DORRL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FEALX": {
+        "chart_name": "FEALX TWO (RNAV), CONT.2",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FEALX2.FEALX",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FLL": {
+        "chart_name": "FORT LAUDERDALE TWO, CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FLL2.FLL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FRSBE": {
+        "chart_name": "FRSBE TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FRSBE2.FRSBE",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GLADZ": {
+        "chart_name": "GLADZ FOUR (RNAV), CONT.2",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "GLADZ4.GLADZ",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HROCK": {
+        "chart_name": "HROCK TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "HROCK2.HROCK",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LIFRR": {
+        "chart_name": "LIFRR TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "LIFRR2.LIFRR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAYNR": {
+        "chart_name": "MAYNR THREE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "MAYNR3.MAYNR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "REGAE": {
+        "chart_name": "REGAE TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "REGAE2.REGAE",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SNAPR": {
+        "chart_name": "SNAPR TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "SNAPR2.SNAPR",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KFMY": {
+      "PUMPP": {
+        "chart_name": "PUMPP TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "PUMPP.PUMPP2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SHFTY": {
+        "chart_name": "SHFTY SIX (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "SHFTY.SHFTY6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TYNEE": {
+        "chart_name": "TYNEE FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "TYNEE.TYNEE4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CSHEL": {
+        "chart_name": "CSHEL EIGHT (RNAV)",
+        "type": "SID",
+        "revision": 8,
+        "computer_code": "CSHEL8.CSHEL",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KRSW": {
+      "PUMPP": {
+        "chart_name": "PUMPP TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "PUMPP.PUMPP2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SHFTY": {
+        "chart_name": "SHFTY SIX (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "SHFTY.SHFTY6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TYNEE": {
+        "chart_name": "TYNEE FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "TYNEE.TYNEE4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "ALICO": {
+        "chart_name": "ALICO SEVEN",
+        "type": "SID",
+        "revision": 7,
+        "computer_code": "ALICO7.ALICO",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CSHEL": {
+        "chart_name": "CSHEL EIGHT (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 8,
+        "computer_code": "CSHEL8.CSHEL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MOOKY": {
+        "chart_name": "MOOKY SIX",
+        "type": "SID",
+        "revision": 6,
+        "computer_code": "MOOKY6.MOOKY",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SCUBY": {
+        "chart_name": "SCUBY EIGHT",
+        "type": "SID",
+        "revision": 8,
+        "computer_code": "SCUBY8.SCUBY",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KFPR": {},
+    "KHWO": {
+      "DEKAL": {
+        "chart_name": "DEKAL NINE",
+        "type": "STAR",
+        "revision": 9,
+        "computer_code": "DEKAL.DEKAL9",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FORTL": {
+        "chart_name": "FORTL NINE",
+        "type": "STAR",
+        "revision": 9,
+        "computer_code": "FORTL.FORTL9",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "KYAKS": {
+        "chart_name": "KYAKS THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "KYAKS.KYAKS3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TARPN": {
+        "chart_name": "TARPN THREE (RNAV)",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TARPN.TARPN3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TOREZ": {
+        "chart_name": "TOREZ ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "TOREZ.TOREZ1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MIA": {
+        "chart_name": "MIAMI TWO, CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "MIA2.MIA",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KCRG": {
+      "ALCRN": {
+        "chart_name": "ALCRN ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "ALCRN.ALCRN1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HOTAR": {
+        "chart_name": "HOTAR ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "HOTAR.HOTAR1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MARQO": {
+        "chart_name": "MARQO THREE (RNAV)",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "MARQO.MARQO3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "POGIE": {
+        "chart_name": "POGIE TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "ORL.POGIE2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "QUBEN": {
+        "chart_name": "QUBEN TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "QUBEN.QUBEN2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TEBOW": {
+        "chart_name": "TEBOW TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "TEBOW.TEBOW2",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KJAX": {
+      "ALCRN": {
+        "chart_name": "ALCRN ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "ALCRN.ALCRN1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HOTAR": {
+        "chart_name": "HOTAR ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "HOTAR.HOTAR1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LUNNI": {
+        "chart_name": "LUNNI TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "LUNNI.LUNNI2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MARQO": {
+        "chart_name": "MARQO THREE (RNAV)",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "MARQO.MARQO3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "OHDEA": {
+        "chart_name": "OHDEA TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "OHDEA.OHDEA2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "POGIE": {
+        "chart_name": "POGIE TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "ORL.POGIE2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "QUBEN": {
+        "chart_name": "QUBEN TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "QUBEN.QUBEN2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TEBOW": {
+        "chart_name": "TEBOW TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "TEBOW.TEBOW2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BRSTL": {
+        "chart_name": "BRSTL ONE (RNAV)",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "BRSTL1.BRSTL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CROSB": {
+        "chart_name": "CROSB TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "CROSB2.CROSB",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "EXBOX": {
+        "chart_name": "EXBOX TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "EXBOX2.EXBOX",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JAX": {
+        "chart_name": "JACKSONVILLE SEVEN",
+        "type": "SID",
+        "revision": 7,
+        "computer_code": "JAX7.JAX",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JETIN": {
+        "chart_name": "JETIN TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "JETIN2.JETIN",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SAWGY": {
+        "chart_name": "SAWGY THREE",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "SAWGY3.OMN",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KNIP": {
+      "ALCRN": {
+        "chart_name": "ALCRN ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "ALCRN.ALCRN1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HOTAR": {
+        "chart_name": "HOTAR ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "HOTAR.HOTAR1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "POGIE": {
+        "chart_name": "POGIE TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "ORL.POGIE2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "QUBEN": {
+        "chart_name": "QUBEN TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "QUBEN.QUBEN2",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KEYW": {
+      "FNTSY": {
+        "chart_name": "FNTSY ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "FNTSY.FNTSY1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "KRAKN": {
+        "chart_name": "KRAKN ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "KRAKN.KRAKN1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BUFTT": {
+        "chart_name": "BUFTT ONE (RNAV)",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "BUFTT1.BUFTT",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KNQX": {
+      "FNTSY": {
+        "chart_name": "FNTSY ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "FNTSY.FNTSY1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "KRAKN": {
+        "chart_name": "KRAKN ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "KRAKN.KRAKN1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "STRAP": {
+        "chart_name": "STRAP TWO",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KLAL": {
+      "LUBBR": {
+        "chart_name": "LUBBR FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "LUBBR.LUBBR4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAATY": {
+        "chart_name": "MAATY FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "MAATY.MAATY5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "RAYZZ": {
+        "chart_name": "RAYZZ THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "RAYZZ.RAYZZ3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "OWAYY": {
+        "chart_name": "OWAYY ONE (RNAV)",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "OWAYY1.OWAYY",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SBOAT": {
+        "chart_name": "SBOAT ONE (RNAV)",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "SBOAT1.SBOAT",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KLEE": {
+      "ALYNA": {
+        "chart_name": "ALYNA FOUR (RNAV)",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "ALYNA.ALYNA4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JOKRS": {
+        "chart_name": "JOKRS FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "JOKRS.JOKRS4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MINEE": {
+        "chart_name": "MINEE SIX, CONT.1",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "MINEE.MINEE6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MUNGI": {
+        "chart_name": "MUNGI ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "MUNGI.MUNGI1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PRICY": {
+        "chart_name": "PRICY FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "PRICY.PRICY5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SLOAO": {
+        "chart_name": "SLOAO ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "SLOAO.SLOAO1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TTHOR": {
+        "chart_name": "TTHOR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TTHOR.TTHOR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KNRB": {
+      "ALCRN": {
+        "chart_name": "ALCRN ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "ALCRN.ALCRN1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HOTAR": {
+        "chart_name": "HOTAR ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "HOTAR.HOTAR1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MARQO": {
+        "chart_name": "MARQO THREE (RNAV)",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "MARQO.MARQO3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "POGIE": {
+        "chart_name": "POGIE TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "ORL.POGIE2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "QUBEN": {
+        "chart_name": "QUBEN TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "QUBEN.QUBEN2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TEBOW": {
+        "chart_name": "TEBOW TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "TEBOW.TEBOW2",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KMLB": {
+      "BITHO": {
+        "chart_name": "BITHO SEVEN",
+        "type": "STAR",
+        "revision": 7,
+        "computer_code": "BITHO.BITHO7",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JOKRS": {
+        "chart_name": "JOKRS FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "JOKRS.JOKRS4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PRICY": {
+        "chart_name": "PRICY FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "PRICY.PRICY5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MLB": {
+        "chart_name": "MELBOURNE EIGHT",
+        "type": "SID",
+        "revision": 8,
+        "computer_code": "MLB8.MLB",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KCOI": {
+      "BITHO": {
+        "chart_name": "BITHO SEVEN",
+        "type": "STAR",
+        "revision": 7,
+        "computer_code": "BITHO.BITHO7",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MINEE": {
+        "chart_name": "MINEE SIX, CONT.1",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "MINEE.MINEE6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SLOAO": {
+        "chart_name": "SLOAO ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "SLOAO.SLOAO1",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KTMB": {
+      "BNFSH": {
+        "chart_name": "BNFSH THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BNFSH.BNFSH3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CSTAL": {
+        "chart_name": "CSTAL THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "CSTAL.CSTAL3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DVALL": {
+        "chart_name": "DVALL FOUR",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "DVALL.DVALL4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FOWEE": {
+        "chart_name": "FOWEE TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "FOWEE.FOWEE2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FROGZ": {
+        "chart_name": "FROGZ FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "FROGZ.FROGZ5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PALMZ": {
+        "chart_name": "PALMZ TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "PALMZ.PALMZ2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SNDBR": {
+        "chart_name": "SNDBR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "SNDBR.SNDBR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TARPN": {
+        "chart_name": "TARPN THREE (RNAV)",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TARPN.TARPN3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "VIICE": {
+        "chart_name": "VIICE TWO (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "VIICE.VIICE2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "ALTNN": {
+        "chart_name": "ALTNN TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "ALTNN2.ALTNN",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BNGOS": {
+        "chart_name": "BNGOS FOUR (RNAV)",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "BNGOS4.BNGOS",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DORRL": {
+        "chart_name": "DORRL TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "DORRL2.DORRL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FLMGO": {
+        "chart_name": "FLMGO TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FLMGO2.FLMGO",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FOLZZ": {
+        "chart_name": "FOLZZ THREE (RNAV)",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "FOLZZ3.FOLZZ",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HURCN": {
+        "chart_name": "HURCN FOUR (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "HURCN4.HURCN",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LIFRR": {
+        "chart_name": "LIFRR TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "LIFRR2.LIFRR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAYNR": {
+        "chart_name": "MAYNR THREE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "MAYNR3.MAYNR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MELLZ": {
+        "chart_name": "MELLZ TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "MELLZ2.MELLZ",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MIA": {
+        "chart_name": "MIAMI TWO, CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "MIA2.MIA",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KMIA": {
+      "BNFSH": {
+        "chart_name": "BNFSH THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BNFSH.BNFSH3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CSTAL": {
+        "chart_name": "CSTAL THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "CSTAL.CSTAL3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DVALL": {
+        "chart_name": "DVALL FOUR",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "DVALL.DVALL4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FOWEE": {
+        "chart_name": "FOWEE TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "FOWEE.FOWEE2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FROGZ": {
+        "chart_name": "FROGZ FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "FROGZ.FROGZ5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PALMZ": {
+        "chart_name": "PALMZ TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "PALMZ.PALMZ2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SNDBR": {
+        "chart_name": "SNDBR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "SNDBR.SNDBR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TARPN": {
+        "chart_name": "TARPN THREE (RNAV)",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TARPN.TARPN3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "VIICE": {
+        "chart_name": "VIICE TWO (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "VIICE.VIICE2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "ALTNN": {
+        "chart_name": "ALTNN TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "ALTNN2.ALTNN",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BNGOS": {
+        "chart_name": "BNGOS FOUR (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "BNGOS4.BNGOS",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DORRL": {
+        "chart_name": "DORRL TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "DORRL2.DORRL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FLMGO": {
+        "chart_name": "FLMGO TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FLMGO2.FLMGO",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FOLZZ": {
+        "chart_name": "FOLZZ THREE (RNAV), CONT.2",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "FOLZZ3.FOLZZ",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GLADZ": {
+        "chart_name": "GLADZ FOUR (RNAV), CONT.2",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "GLADZ4.GLADZ",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GWAVA": {
+        "chart_name": "GWAVA TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "GWAVA2.GWAVA",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HURCN": {
+        "chart_name": "HURCN FOUR (RNAV), CONT.2",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "HURCN4.HURCN",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "KLADA": {
+        "chart_name": "KLADA TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "KLADA2.KLADA",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LIFRR": {
+        "chart_name": "LIFRR TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "LIFRR2.LIFRR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAYNR": {
+        "chart_name": "MAYNR THREE (RNAV), CONT.2",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "MAYNR3.MAYNR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MIA": {
+        "chart_name": "MIAMI TWO, CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "MIA2.MIA",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "NNOCE": {
+        "chart_name": "NNOCE TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "NNOCE2.NNOCE",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KOPF": {
+      "BHHIA": {
+        "chart_name": "BHHIA THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BHHIA.BHHIA3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CUUDA": {
+        "chart_name": "CUUDA THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "CUUDA.CUUDA3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CUURT": {
+        "chart_name": "CUURT ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "CUURT.CUURT1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DEKAL": {
+        "chart_name": "DEKAL NINE",
+        "type": "STAR",
+        "revision": 9,
+        "computer_code": "DEKAL.DEKAL9",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DVALL": {
+        "chart_name": "DVALL FOUR",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "DVALL.DVALL4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FORTL": {
+        "chart_name": "FORTL NINE",
+        "type": "STAR",
+        "revision": 9,
+        "computer_code": "FORTL.FORTL9",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "KYAKS": {
+        "chart_name": "KYAKS THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "KYAKS.KYAKS3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "OLAHS": {
+        "chart_name": "OLAHS THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "OLAHS.OLAHS3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PALMZ": {
+        "chart_name": "PALMZ TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "PALMZ.PALMZ2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TARPN": {
+        "chart_name": "TARPN THREE (RNAV)",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TARPN.TARPN3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TOREZ": {
+        "chart_name": "TOREZ ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "TOREZ.TOREZ1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "ALTNN": {
+        "chart_name": "ALTNN TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "ALTNN2.ALTNN",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BNGOS": {
+        "chart_name": "BNGOS FOUR (RNAV)",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "BNGOS4.BNGOS",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DORRL": {
+        "chart_name": "DORRL TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "DORRL2.DORRL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FLMGO": {
+        "chart_name": "FLMGO TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FLMGO2.FLMGO",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FOLZZ": {
+        "chart_name": "FOLZZ THREE (RNAV)",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "FOLZZ3.FOLZZ",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GLADZ": {
+        "chart_name": "GLADZ FOUR (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "GLADZ4.GLADZ",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HURCN": {
+        "chart_name": "HURCN FOUR (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "HURCN4.HURCN",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HUSIL": {
+        "chart_name": "HUSIL THREE (RNAV)",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "HUSIL3.HUSIL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LIFRR": {
+        "chart_name": "LIFRR TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "LIFRR2.LIFRR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAYNR": {
+        "chart_name": "MAYNR THREE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "MAYNR3.MAYNR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MIA": {
+        "chart_name": "MIAMI TWO, CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "MIA2.MIA",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KAPF": {
+      "PIKKR": {
+        "chart_name": "PIKKR SEVEN (RNAV)",
+        "type": "STAR",
+        "revision": 7,
+        "computer_code": "PIKKR.PIKKR7",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SHFTY": {
+        "chart_name": "SHFTY SIX (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "SHFTY.SHFTY6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "ZEILR": {
+        "chart_name": "ZEILR SIX",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "SRQ.ZEILR6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CSHEL": {
+        "chart_name": "CSHEL EIGHT (RNAV)",
+        "type": "SID",
+        "revision": 8,
+        "computer_code": "CSHEL8.CSHEL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "APF": {
+        "chart_name": "NAPLES SIX",
+        "type": "SID",
+        "revision": 6,
+        "computer_code": "APF6.APF",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KEVB": {
+      "TTHOR": {
+        "chart_name": "TTHOR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TTHOR.TTHOR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KISM": {
+      "ALYNA": {
+        "chart_name": "ALYNA FOUR (RNAV)",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "ALYNA.ALYNA4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BITHO": {
+        "chart_name": "BITHO SEVEN",
+        "type": "STAR",
+        "revision": 7,
+        "computer_code": "BITHO.BITHO7",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JAFAR": {
+        "chart_name": "JAFAR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "JAFAR.JAFAR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JOKRS": {
+        "chart_name": "JOKRS FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "JOKRS.JOKRS4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LEESE": {
+        "chart_name": "LEESE THREE, CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "LEESE.LEESE3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MINEE": {
+        "chart_name": "MINEE SIX, CONT.1",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "MINEE.MINEE6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MUNGI": {
+        "chart_name": "MUNGI ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "MUNGI.MUNGI1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PRICY": {
+        "chart_name": "PRICY FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "PRICY.PRICY5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SHREK": {
+        "chart_name": "SHREK TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "SHREK.SHREK2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SLOAO": {
+        "chart_name": "SLOAO ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "SLOAO.SLOAO1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SNFLD": {
+        "chart_name": "SNFLD THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "SNFLD.SNFLD3",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KORL": {
+      "ALYNA": {
+        "chart_name": "ALYNA FOUR (RNAV)",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "ALYNA.ALYNA4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JAFAR": {
+        "chart_name": "JAFAR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "JAFAR.JAFAR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JOKRS": {
+        "chart_name": "JOKRS FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "JOKRS.JOKRS4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LEESE": {
+        "chart_name": "LEESE THREE, CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "LEESE.LEESE3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MINEE": {
+        "chart_name": "MINEE SIX, CONT.1",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "MINEE.MINEE6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MUNGI": {
+        "chart_name": "MUNGI ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "MUNGI.MUNGI1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PRICY": {
+        "chart_name": "PRICY FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "PRICY.PRICY5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SHREK": {
+        "chart_name": "SHREK TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "SHREK.SHREK2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SLOAO": {
+        "chart_name": "SLOAO ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "SLOAO.SLOAO1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TTHOR": {
+        "chart_name": "TTHOR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TTHOR.TTHOR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "NYTES": {
+        "chart_name": "NYTES TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "NYTES2.NYTES",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TOLLZ": {
+        "chart_name": "TOLLZ TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "TOLLZ2.TOLLZ",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KMCO": {
+      "ALYNA": {
+        "chart_name": "ALYNA FOUR (RNAV)",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "ALYNA.ALYNA4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BITHO": {
+        "chart_name": "BITHO SEVEN",
+        "type": "STAR",
+        "revision": 7,
+        "computer_code": "BITHO.BITHO7",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GRNCH": {
+        "chart_name": "GRNCH FIVE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "GRNCH.GRNCH5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GTOUT": {
+        "chart_name": "GTOUT ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "GTOUT.GTOUT1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JAFAR": {
+        "chart_name": "JAFAR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "JAFAR.JAFAR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JOKRS": {
+        "chart_name": "JOKRS FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "JOKRS.JOKRS4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LEESE": {
+        "chart_name": "LEESE THREE, CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "LEESE.LEESE3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MINEE": {
+        "chart_name": "MINEE SIX, CONT.1",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "MINEE.MINEE6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MUNGI": {
+        "chart_name": "MUNGI ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "MUNGI.MUNGI1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PRICY": {
+        "chart_name": "PRICY FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "PRICY.PRICY5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SHREK": {
+        "chart_name": "SHREK TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "SHREK.SHREK2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SLOAO": {
+        "chart_name": "SLOAO ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "SLOAO.SLOAO1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SNFLD": {
+        "chart_name": "SNFLD THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "SNFLD.SNFLD3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CITR": {
+        "chart_name": "CITRUS ONE",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "CITR1.CITR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DDANY": {
+        "chart_name": "DDANY THREE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "DDANY3.DDANY",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FATHE": {
+        "chart_name": "FATHE FOUR (RNAV), CONT.2",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "FATHE4.FATHE",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FSHUN": {
+        "chart_name": "FSHUN FOUR (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "FSHUN4.FSHUN",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JEEMY": {
+        "chart_name": "JEEMY FOUR (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "JEEMY4.JEEMY",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MZULO": {
+        "chart_name": "MZULO THREE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "MZULO3.MZULO",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "ORLA": {
+        "chart_name": "ORLANDO SIX",
+        "type": "SID",
+        "revision": 6,
+        "computer_code": "ORLA6.ORLA",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "OSPRY": {
+        "chart_name": "OSPRY ONE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "OSPRY1.OSPRY",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "RDSOX": {
+        "chart_name": "RDSOX ONE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "RDSOX1.RDSOX",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KSFB": {
+      "ALYNA": {
+        "chart_name": "ALYNA FOUR (RNAV)",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "ALYNA.ALYNA4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JOKRS": {
+        "chart_name": "JOKRS FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "JOKRS.JOKRS4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MINEE": {
+        "chart_name": "MINEE SIX, CONT.1",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "MINEE.MINEE6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MUNGI": {
+        "chart_name": "MUNGI ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "MUNGI.MUNGI1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PRICY": {
+        "chart_name": "PRICY FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "PRICY.PRICY5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SHREK": {
+        "chart_name": "SHREK TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "SHREK.SHREK2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SLOAO": {
+        "chart_name": "SLOAO ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "SLOAO.SLOAO1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TTHOR": {
+        "chart_name": "TTHOR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TTHOR.TTHOR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SFB": {
+        "chart_name": "SANFORD ONE",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "SFB1.SFB",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KOMN": {
+      "TTHOR": {
+        "chart_name": "TTHOR THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TTHOR.TTHOR3",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KFIN": {},
+    "KPMP": {
+      "BHHIA": {
+        "chart_name": "BHHIA THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BHHIA.BHHIA3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CPTAN": {
+        "chart_name": "CPTAN THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "CPTAN.CPTAN3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DEKAL": {
+        "chart_name": "DEKAL NINE",
+        "type": "STAR",
+        "revision": 9,
+        "computer_code": "DEKAL.DEKAL9",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DVALL": {
+        "chart_name": "DVALL FOUR",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "DVALL.DVALL4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FORTL": {
+        "chart_name": "FORTL NINE",
+        "type": "STAR",
+        "revision": 9,
+        "computer_code": "FORTL.FORTL9",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JESTR": {
+        "chart_name": "JESTR ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "JESTR.JESTR1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "KYAKS": {
+        "chart_name": "KYAKS THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "KYAKS.KYAKS3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "OLAHS": {
+        "chart_name": "OLAHS THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "OLAHS.OLAHS3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TEEKY": {
+        "chart_name": "TEEKY FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "TEEKY.TEEKY4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TOREZ": {
+        "chart_name": "TOREZ ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "TOREZ.TOREZ1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BNICE": {
+        "chart_name": "BNICE TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "BNICE2.BNICE",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DORRL": {
+        "chart_name": "DORRL TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "DORRL2.DORRL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FEALX": {
+        "chart_name": "FEALX TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FEALX2.FEALX",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FLL": {
+        "chart_name": "FORT LAUDERDALE TWO, CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FLL2.FLL",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "FRSBE": {
+        "chart_name": "FRSBE TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "FRSBE2.FRSBE",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GABOW": {
+        "chart_name": "GABOW TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "GABOW2.GABOW",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HROCK": {
+        "chart_name": "HROCK TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "HROCK2.HROCK",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LIFRR": {
+        "chart_name": "LIFRR TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "LIFRR2.LIFRR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAYNR": {
+        "chart_name": "MAYNR THREE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "MAYNR3.MAYNR",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KPGD": {
+      "LUBBR": {
+        "chart_name": "LUBBR FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "LUBBR.LUBBR4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PIKKR": {
+        "chart_name": "PIKKR SEVEN (RNAV)",
+        "type": "STAR",
+        "revision": 7,
+        "computer_code": "PIKKR.PIKKR7",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KSPG": {
+      "BANGZ": {
+        "chart_name": "BANGZ TWO (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "BANGZ.BANGZ2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BLFRG": {
+        "chart_name": "BLFRG THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BLFRG.BLFRG3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DADES": {
+        "chart_name": "DADES TWO (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "DADES.DADES2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "RAYZZ": {
+        "chart_name": "RAYZZ THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "RAYZZ.RAYZZ3",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KPIE": {
+      "BANGZ": {
+        "chart_name": "BANGZ TWO (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "BANGZ.BANGZ2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BLFRG": {
+        "chart_name": "BLFRG THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BLFRG.BLFRG3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DADES": {
+        "chart_name": "DADES TWO (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "DADES.DADES2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "RAYZZ": {
+        "chart_name": "RAYZZ THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "RAYZZ.RAYZZ3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BAYPO": {
+        "chart_name": "BAYPO TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "BAYPO2.BAYPO",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "ENDED": {
+        "chart_name": "ENDED TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "ENDED2.ENDED",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LLRGO": {
+        "chart_name": "LLRGO ONE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "LLRGO1.LLRGO",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PIE": {
+        "chart_name": "ST PETE ONE",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "PIE1.PIE",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KSRQ": {
+      "BANGZ": {
+        "chart_name": "BANGZ TWO (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "BANGZ.BANGZ2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LUBBR": {
+        "chart_name": "LUBBR FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "LUBBR.LUBBR4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "RAYZZ": {
+        "chart_name": "RAYZZ THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "RAYZZ.RAYZZ3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SRQ": {
+        "chart_name": "SARASOTA SIX",
+        "type": "SID",
+        "revision": 6,
+        "computer_code": "SRQ6.SRQ",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TIDES": {
+        "chart_name": "TIDES ONE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "TIDES1.TIDES",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KSUA": {
+      "TTYLR": {
+        "chart_name": "TTYLR FOUR",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "TTYLR.TTYLR4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "VUUDU": {
+        "chart_name": "VUUDU ONE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "VUUDU.VUUDU1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SNDLR": {
+        "chart_name": "SNDLR THREE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "SNDLR3.SNDLR",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KMCF": {
+      "BLFRG": {
+        "chart_name": "BLFRG THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BLFRG.BLFRG3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DADES": {
+        "chart_name": "DADES TWO (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "DADES.DADES2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAATY": {
+        "chart_name": "MAATY FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "MAATY.MAATY5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "RAYZZ": {
+        "chart_name": "RAYZZ THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "RAYZZ.RAYZZ3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MACDILL": {
+        "chart_name": "MACDILL ONE",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KTPA": {
+      "BLFRG": {
+        "chart_name": "BLFRG THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BLFRG.BLFRG3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DADES": {
+        "chart_name": "DADES TWO (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "DADES.DADES2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAATY": {
+        "chart_name": "MAATY FIVE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 5,
+        "computer_code": "MAATY.MAATY5",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "RAYZZ": {
+        "chart_name": "RAYZZ THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "RAYZZ.RAYZZ3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "BAYPO": {
+        "chart_name": "BAYPO TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "BAYPO2.BAYPO",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CROWD": {
+        "chart_name": "CROWD EIGHT (RNAV)",
+        "type": "SID",
+        "revision": 8,
+        "computer_code": "CROWD8.CROWD",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "DORMR": {
+        "chart_name": "DORMR THREE (RNAV)",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "DORMR3.DORMR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "ENDED": {
+        "chart_name": "ENDED TWO (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "ENDED2.ENDED",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GANDY": {
+        "chart_name": "GANDY EIGHT (RNAV)",
+        "type": "SID",
+        "revision": 8,
+        "computer_code": "GANDY8.GANDY",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "KNOST": {
+        "chart_name": "KNOST TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "KNOST2.KNOST",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LGTNG": {
+        "chart_name": "LGTNG FIVE",
+        "type": "SID",
+        "revision": 5,
+        "computer_code": "LGTNG5.LGTNG",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TAMPA": {
+        "chart_name": "TAMPA NINE",
+        "type": "SID",
+        "revision": 9,
+        "computer_code": "TAMPA9.TAMPA",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KTIX": {
+      "BITHO": {
+        "chart_name": "BITHO SEVEN",
+        "type": "STAR",
+        "revision": 7,
+        "computer_code": "BITHO.BITHO7",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MINEE": {
+        "chart_name": "MINEE SIX, CONT.1",
+        "type": "STAR",
+        "revision": 6,
+        "computer_code": "MINEE.MINEE6",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SLOAO": {
+        "chart_name": "SLOAO ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "SLOAO.SLOAO1",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KTTS": {
+      "BITHO": {
+        "chart_name": "BITHO SEVEN",
+        "type": "STAR",
+        "revision": 7,
+        "computer_code": "BITHO.BITHO7",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KVNC": {
+      "BANGZ": {
+        "chart_name": "BANGZ TWO (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "BANGZ.BANGZ2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LUBBR": {
+        "chart_name": "LUBBR FOUR (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "LUBBR.LUBBR4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "RAYZZ": {
+        "chart_name": "RAYZZ THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "RAYZZ.RAYZZ3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TIDES": {
+        "chart_name": "TIDES ONE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "TIDES1.TIDES",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KVRB": {},
+    "KPBI": {
+      "CLMNT": {
+        "chart_name": "CLMNT TWO (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "CLMNT.CLMNT2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CPTAN": {
+        "chart_name": "CPTAN THREE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "CPTAN.CPTAN3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JESTR": {
+        "chart_name": "JESTR ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "JESTR.JESTR1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MAHHI": {
+        "chart_name": "MAHHI THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "MAHHI.MAHHI3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MLB": {
+        "chart_name": "MELBOURNE TWO",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "MLB.MLB2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "STOOP": {
+        "chart_name": "STOOP THREE",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "STOOP.STOOP3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TTYLR": {
+        "chart_name": "TTYLR FOUR",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "TTYLR.TTYLR4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "VUUDU": {
+        "chart_name": "VUUDU ONE (RNAV), CONT.2",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "VUUDU.VUUDU1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MIXAE": {
+        "chart_name": "MIXAE FOUR (RNAV)",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "MIXAE4.MIXAE",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "OLAKE": {
+        "chart_name": "OLAKE THREE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "OLAKE3.OLAKE",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PBI": {
+        "chart_name": "PALM BEACH FOUR",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "PBI4.PBI",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SLIDZ": {
+        "chart_name": "SLIDZ THREE (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "SLIDZ3.SLIDZ",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TBIRD": {
+        "chart_name": "TBIRD SEVEN (RNAV), CONT.2",
+        "type": "SID",
+        "revision": 7,
+        "computer_code": "TBIRD7.TBIRD",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "WELLY": {
+        "chart_name": "WELLY FOUR (RNAV)",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "WELLY4.WELLY",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "KLGA": {
+      "APPLE": {
+        "chart_name": "APPLE THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "RUUTH.APPLE3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "MIP": {
+        "chart_name": "MILTON FOUR",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "MIP.MIP4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "NOBBI": {
+        "chart_name": "NOBBI ONE (RNAV)",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "CASSH.NOBBI1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "PROUD": {
+        "chart_name": "PROUD TWO (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "ENO.PROUD2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "VADDR": {
+        "chart_name": "VADDR ONE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 1,
+        "computer_code": "BASYE.VADDR1",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GLDMN": {
+        "chart_name": "GLDMN EIGHT (RNAV)",
+        "type": "SID",
+        "revision": 8,
+        "computer_code": "GLDMN8.GLDMN",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HOPEA": {
+        "chart_name": "HOPEA THREE (RNAV)",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "HOPEA3.HOPEA",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JUTES": {
+        "chart_name": "JUTES FOUR (RNAV)",
+        "type": "SID",
+        "revision": 4,
+        "computer_code": "JUTES4.JUTES",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "LGA": {
+        "chart_name": "LAGUARDIA SEVEN, CONT.2",
+        "type": "SID",
+        "revision": 7,
+        "computer_code": "LGA7.LGA",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "NTHNS": {
+        "chart_name": "NTHNS SIX (RNAV)",
+        "type": "SID",
+        "revision": 6,
+        "computer_code": "NTHNS6.NTHNS",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TNNIS": {
+        "chart_name": "TNNIS SIX (RNAV), CONT.1",
+        "type": "SID",
+        "revision": 6,
+        "computer_code": "TNNIS6.TNNIS",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    },
+    "TJSJ": {
+      "BEANO": {
+        "chart_name": "BEANO THREE (RNAV)",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "BEANO.BEANO3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "CHAKA": {
+        "chart_name": "CHAKA FOUR (RNAV)",
+        "type": "STAR",
+        "revision": 4,
+        "computer_code": "CHAKA.CHAKA4",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JOSHE": {
+        "chart_name": "JOSHE THREE (RNAV), CONT.1",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "JOSHE.JOSHE3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SAALR": {
+        "chart_name": "SAALR TWO (RNAV)",
+        "type": "STAR",
+        "revision": 2,
+        "computer_code": "SAALR.SAALR2",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "TROCO": {
+        "chart_name": "TROCO THREE (RNAV)",
+        "type": "STAR",
+        "revision": 3,
+        "computer_code": "TROCO.TROCO3",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "ACONY": {
+        "chart_name": "ACONY THREE (RNAV)",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "ACONY3.ACONY",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GANBO": {
+        "chart_name": "GANBO ONE (RNAV)",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "GANBO1.GANBO",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "GLADA": {
+        "chart_name": "GLADA THREE (RNAV)",
+        "type": "SID",
+        "revision": 3,
+        "computer_code": "GLADA3.GLADA",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "HAMAR": {
+        "chart_name": "HAMAR TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "HAMAR2.HAMAR",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JAAWS": {
+        "chart_name": "JAAWS TWO",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "JAAWS2.JAAWS",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "JETSS": {
+        "chart_name": "JETSS ONE",
+        "type": "SID",
+        "revision": 1,
+        "computer_code": "JETSS1.JETSS",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "SNGRA": {
+        "chart_name": "SNGRA TWO (RNAV)",
+        "type": "SID",
+        "revision": 2,
+        "computer_code": "SNGRA2.SNGRA",
+        "change_flag": "",
+        "rev_mismatch": false
+      },
+      "VERMO": {
+        "chart_name": "VERMO SIX",
+        "type": "SID",
+        "revision": 6,
+        "computer_code": "VERMO6.VERMO",
+        "change_flag": "",
+        "rev_mismatch": false
+      }
+    }
+  }
+}
