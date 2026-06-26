@@ -766,6 +766,13 @@
      so the controller's eye is drawn to confirming the data tag at taxi time. */
   .taxi-entry .t-detail .t-val.t-sq { color: var(--warn); }
   .taxi-entry .t-sqver-line .t-key { color: var(--warn); }
+  /* Blink the amber squawk value until Verify Squawk is checked, so the
+     controller's eye stays on the unverified code. Stops the moment sqVerified
+     is set (the sq-unverified class is removed on re-render). Reuses the
+     opacity-pulse keyframes; the issued card never blinks. */
+  .taxi-entry.sq-unverified:not(.issued) .t-detail .t-val.t-sq {
+    animation: rwy-verified-blink 1.0s ease-in-out infinite;
+  }
   /* When the card is flashing (runway + squawk both verified), the amber gives
      way to the green active-runway blink like the rest of the detail block. */
   .taxi-entry.rwy-verified:not(.issued) .t-detail .t-val.t-sq,
@@ -927,7 +934,7 @@
 </div>
 <div class="app">
   <header>
-    <h1>CD Pre-Clearance Checklist<span class="tag" style="background:#3a2d12;color:var(--warn);">SWEATBOX</span><span class="tag" style="background:#12331f;color:var(--success);" title="Build identifier - confirms which file version is loaded">BUILD 34.05</span><span id="revision-badge" class="tag" style="background:transparent;border:1px solid var(--border);color:var(--text-faint);" title="SID/STAR revision data status">rev: n/a</span></h1>
+    <h1>CD Pre-Clearance Checklist<span class="tag" style="background:#3a2d12;color:var(--warn);">SWEATBOX</span><span class="tag" style="background:#12331f;color:var(--success);" title="Build identifier - confirms which file version is loaded">BUILD 34.08</span><span id="revision-badge" class="tag" style="background:transparent;border:1px solid var(--border);color:var(--text-faint);" title="SID/STAR revision data status">rev: n/a</span></h1>
     <div class="stats">
       Cleared today: <b id="stat-today">0</b> &nbsp;&nbsp; Session: <b id="stat-session">0</b>
       &nbsp;&nbsp;
@@ -1215,19 +1222,15 @@
     const STORAGE_KEY = "vatsim_cd_v3_airports_db";
     const loaderEl = document.getElementById("airports-loader");
 
-    // Try localStorage first -- the fast path after first-time setup.
-    try {
-      const cached = localStorage.getItem(STORAGE_KEY);
-      if (cached) {
-        const data = JSON.parse(cached);
-        if (data && typeof data === "object" && Object.keys(data).length > 100) {
-          window.AIRPORTS = data;
-          return;   // loaded; loader stays hidden
-        }
-      }
-    } catch (e) { /* fall through */ }
+    // 34.08: cache-READ removed. We serve over HTTP (Python server on :8080),
+    // so the <script src="airports.js"> load below always succeeds and is
+    // always FRESH. The old localStorage fast-path returned early on a cache
+    // hit and never re-read the file — which silently shadowed edits to
+    // airports.js with stale data (the SNAPR#/SNAPR2 incident traced to this
+    // exact pattern in the LOA loader). The cache WRITE below is kept so the
+    // drag-drop drop-zone reload still works as a fallback. Always load fresh.
 
-    // No cached database -- try the legacy <script src="airports.js"> approach
+    // Try the <script src="airports.js"> approach
     // by injecting it dynamically. If Chrome blocks it on file://, the script
     // will fail to load (onerror fires) and we reveal the drop-zone banner.
     const probe = document.createElement("script");
@@ -3992,22 +3995,13 @@
     const STORAGE_KEY = "vatsim_cd_v3_actypes_db";
     const loaderEl = document.getElementById("actypes-loader");
 
-    // Fast path: localStorage cache
-    try {
-      const cached = localStorage.getItem(STORAGE_KEY);
-      if (cached) {
-        const data = JSON.parse(cached);
-        if (data && typeof data === "object" && Object.keys(data).length > 50) {
-          window.AIRCRAFT_TYPES = data;
-          return; // loaded; banner stays hidden
-        }
-      }
-    } catch (e) {}
+    // 34.08: cache-READ removed (same reason as airports/LOA loaders). Served
+    // over HTTP, so the script-tag load below is always fresh. The old early
+    // return on a localStorage hit silently shadowed edits to aircraft_types.js
+    // — directly relevant to the E545/E550 additions, which a warm cache would
+    // have hidden. Cache WRITE kept for the drop-zone fallback. Always fresh.
 
-    // Not cached — show the banner immediately so user knows to drag the file
-    loaderEl.hidden = false;
-
-    // Also try script tag load (works if file:// allows it)
+    // Try script tag load (works over HTTP; file:// falls back to drop-zone)
     const probe = document.createElement("script");
     probe.src = "aircraft_types.js";
     probe.onload = function () {
@@ -4096,20 +4090,16 @@
     }
   })();
 
-  // LOA routes — restore from localStorage or try script-tag load
+  // LOA routes — load fresh from script tag (HTTP), drop-zone fallback
   (function() {
     const STORAGE_KEY = "vatsim_cd_v3_loa_routes";
     const loaderEl = document.getElementById("loa-loader");
-    try {
-      const cached = localStorage.getItem(STORAGE_KEY);
-      if (cached) {
-        const data = JSON.parse(cached);
-        if (data && Array.isArray(data) && data.length > 0) {
-          window.LOA_ROUTES = data;
-          return;
-        }
-      }
-    } catch(e) {}
+    // 34.08: cache-READ removed. This is the loader whose stale cache caused
+    // the SNAPR#/SNAPR2 incident — the file on disk was correct (SNAPR2) but a
+    // stale localStorage entry (SNAPR#, from an older loa_routes.js) shadowed
+    // it because this early-return never re-read the file. Served over HTTP, so
+    // the script-tag load below is always fresh. Cache WRITE kept for the
+    // drop-zone fallback reload. Always load fresh from disk.
     loaderEl.hidden = false;
     const probe = document.createElement("script");
     probe.src = "loa_routes.js";
@@ -4463,7 +4453,13 @@
         const hasSq = entry.squawk && entry.squawk.trim();
         const sqSatisfied = entry.sqVerified || !hasSq;
         const flashActive = entry.rwyVerified && sqSatisfied;
-        el.className = "taxi-entry " + rulesClass + (issued ? " issued" : "") + (flashActive ? " rwy-verified" : " unverified");
+        // Blink the amber squawk until the controller checks Verify Squawk.
+        // Only when there's a squawk to verify and the card isn't already in
+        // the green active-runway flash (that state recolors the squawk green).
+        const sqUnverified = hasSq && !entry.sqVerified && !flashActive;
+        el.className = "taxi-entry " + rulesClass + (issued ? " issued" : "") +
+          (flashActive ? " rwy-verified" : " unverified") +
+          (sqUnverified ? " sq-unverified" : "");
         const route = lookupTaxiRoute(entry.position, entry.rwy);
         const hasDest = entry.dest && entry.dest.trim();
         const hasInit = entry.initial && String(entry.initial).trim();
@@ -8437,15 +8433,23 @@
       return;
     }
 
-    // Classify engine type
+    // Classify engine type. If the type is unknown (missing from the aircraft
+    // DB, e.g. E545), we DON'T bail out — bailing silently skipped the route
+    // check entirely and let a non-conforming route (e.g. a truncated LOA
+    // route) auto-pass as "valid". Instead we flag the type as unknown and fall
+    // back to matching the filed route against ALL route variants for this
+    // destination. The engine type only selects WHICH variant applies; the
+    // route comparison itself doesn't require it. Uncertainty is surfaced, not
+    // silently resolved.
     const engType = classifyEngineType(acType);
-    if (!engType) {
-      resultEl.innerHTML = '<span style="color:var(--warn);">⚠ Unknown aircraft type — load aircraft_types.js or check type field.</span>';
-      return;
-    }
+    const typeUnknown = !engType;
 
-    // Find matching route(s) for this engine type
-    let matches = entry.routes.filter(r => r.type === engType);
+    // Find matching route(s). With a known engine type, filter to that type.
+    // With an unknown type, consider every route variant for the destination
+    // as a candidate (the filed route is acceptable if it matches ANY of them).
+    let matches = typeUnknown
+      ? entry.routes.slice()
+      : entry.routes.filter(r => r.type === engType);
     if (matches.length === 0) {
       resultEl.innerHTML = '<span style="color:var(--text-faint);">No LOA route for ' + engType + ' to ' + dest + '.</span>';
       return;
@@ -8478,17 +8482,27 @@
 
     // ── All good ──────────────────────────────────────────────────────────
     if (routeMatch && altOk) {
-      resultEl.innerHTML = '<span style="color:var(--success);">✓ Route and altitude match LOA for ' + dest + '</span>';
+      if (typeUnknown) {
+        resultEl.innerHTML = '<span style="color:var(--success);">✓ Route matches LOA for ' + dest +
+          '</span> <span style="color:var(--warn);">(⚠ type ' + (acType || "?") +
+          ' not in DB — verify engine class manually)</span>';
+      } else {
+        resultEl.innerHTML = '<span style="color:var(--success);">✓ Route and altitude match LOA for ' + dest + '</span>';
+      }
       return;
     }
 
     // ── Route mismatch ────────────────────────────────────────────────────
     if (!routeMatch) {
-      // Check "Amended Route" and paste LOA route
+      // Check "Amended Route" and clear the paired "Route valid and current"
+      // box. These are a oneOf pair, so flagging the amendment must clear the
+      // plain route-valid check — including any auto-check applied at fetch
+      // time (autoCheckOnFetch greenlights "route" before this LOA check runs).
       if (!state.checks["route-amended"]) {
         state.checks["route-amended"] = true;
-        // Clear the paired oneOf item
-        state.checks["route-check"] && delete state.checks["route-check"];
+        delete state.checks["route-check"];
+        delete state.checks["route"];
+        if (state.autoChecks) delete state.autoChecks["route"];
         save();
         renderChecklist();
       }
@@ -8530,6 +8544,10 @@
     if (altApplies && !altOk && filedAltFL !== null) {
       const loaAltStr = loaAlt >= 180 ? "FL" + loaAlt : (loaAlt * 100).toLocaleString() + "'";
       parts.push('<span style="color:var(--warn);">⚠ Alt amended → max ' + loaAltStr + '</span>');
+    }
+    if (typeUnknown) {
+      parts.push('<span style="color:var(--warn);">⚠ type ' + (acType || "?") +
+        ' not in DB — checked against all ' + dest + ' LOA routes; verify engine class manually</span>');
     }
     resultEl.innerHTML = parts.join("<br>");
   }
