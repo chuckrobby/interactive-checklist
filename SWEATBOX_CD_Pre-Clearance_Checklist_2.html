@@ -934,7 +934,7 @@
 </div>
 <div class="app">
   <header>
-    <h1>CD Pre-Clearance Checklist<span class="tag" style="background:#3a2d12;color:var(--warn);">SWEATBOX</span><span class="tag" style="background:#12331f;color:var(--success);" title="Build identifier - confirms which file version is loaded">BUILD 34.09</span><span id="revision-badge" class="tag" style="background:transparent;border:1px solid var(--border);color:var(--text-faint);" title="SID/STAR revision data status">rev: n/a</span></h1>
+    <h1>CD Pre-Clearance Checklist<span class="tag" style="background:#3a2d12;color:var(--warn);">SWEATBOX</span><span class="tag" style="background:#12331f;color:var(--success);" title="Build identifier - confirms which file version is loaded">BUILD 34.11</span><span id="revision-badge" class="tag" style="background:transparent;border:1px solid var(--border);color:var(--text-faint);" title="SID/STAR revision data status">rev: n/a</span></h1>
     <div class="stats">
       Cleared today: <b id="stat-today">0</b> &nbsp;&nbsp; Session: <b id="stat-session">0</b>
       &nbsp;&nbsp;
@@ -1206,6 +1206,11 @@
     </aside>
   </div>
 </div>
+
+<!-- VOR/VORTAC navaid name table (identifier -> spoken name) for readback
+     annotation: "direct PJM (St. Maarten)". Loads VOR_NAMES as a global; the
+     readback's vorName() helper degrades gracefully (returns "") if absent. -->
+<script src="vor.js"></script>
 
 <script>
   // === Airport database loader ===
@@ -1764,6 +1769,19 @@
     return String(token || "").toUpperCase().split("").join("-");
   }
 
+  // Look up a VOR/VORTAC/VOR-DME spoken name for a navaid identifier. Returns
+  // the name (e.g. "St. Maarten" for "PJM") or "" if the token isn't a known
+  // VOR. RNAV fixes (SLUGO, SUMAC, etc.) are intentionally absent from the
+  // table and return "" — they pass through unnamed, matching ATC phraseology
+  // (you name a VOR, not a 5-letter RNAV fix). Loaded from vor.js via the
+  // VOR_NAMES global; if that file isn't loaded, this safely returns "".
+  function vorName(token) {
+    const t = String(token || "").toUpperCase().trim();
+    if (!t) return "";
+    if (typeof VOR_NAMES === "undefined" || !VOR_NAMES) return "";
+    return Object.prototype.hasOwnProperty.call(VOR_NAMES, t) ? VOR_NAMES[t] : "";
+  }
+
   // An airway token is a single letter followed by digits (J85, Y290, Y421).
   // Multi-letter prefixes (UM335, UP406) also count -- the FAA/ICAO convention
   // is "letters then digits" for an airway.
@@ -2159,7 +2177,13 @@
         }
         return "join the " + T + " airway";
       }
-      // Plain waypoint fix: always spell out
+      // Plain waypoint fix: always spell out. If it's a known VOR, insert the
+      // spoken navaid name before the spell-out: "direct PJM (St. Maarten),
+      // that's P-J-M". RNAV fixes (not in the VOR table) read as before.
+      const vn = vorName(T);
+      if (vn) {
+        return "direct " + T + " (" + vn + "), that's " + spellOut(T);
+      }
       return "direct " + T + ", that's " + spellOut(T);
     }
 
@@ -2366,7 +2390,23 @@
     // first token -- passing the whole "SID TRANSITION" string makes sidBase fail
     // to normalize (trailing-digit strip can't fire) and the published-altitude
     // lookup returns null, which previously forced a spurious "except maintain".
-    const sidTokenOnly = getField("sid").trim().split(/\s+/)[0] || "";
+    // Resolve the EFFECTIVE SID token for altitude phrasing. On an amended
+    // clearance the SID/First Fix field still holds the FILED SID (e.g.
+    // "REGAE2 URSUS") while the actually-cleared SID is the first token of the
+    // amended route (e.g. "SNAPR2"). The altitude logic below (published-alt
+    // match, ATC-assigned flag) must key on the SID the pilot is actually
+    // flying, or it mis-speaks: filed REGAE2 is ATC-assigned, which would force
+    // a spurious "except maintain 4000", even though the cleared SNAPR2 is a
+    // published climb-via SID whose published initial IS 4000 (so "climb via
+    // the SID" alone is correct). Mirrors the amendedHasSid logic used for the
+    // climb-via vs climb-and-maintain decision further down.
+    const _amendedForSid = !!state.checks["route-amended"];
+    const _amendedSidText = (getField("amendedRoute") || "").trim().toUpperCase();
+    const _amendedSidTok = _amendedSidText.split(/\s+/).filter(Boolean)[0] || "";
+    const _useAmendedSid = _amendedForSid && _amendedSidText !== "RADAR VECTORS" && isStar(_amendedSidTok);
+    const sidTokenOnly = _useAmendedSid
+      ? _amendedSidTok
+      : (getField("sid").trim().split(/\s+/)[0] || "");
     const sidPublishedAlt = sidToInitialAlt(sidTokenOnly, getField("type"));
     const initialVal = getField("initial").trim();
     // The current SID has a known published top altitude that we matched on.
@@ -2539,8 +2579,11 @@
     }
     if (!entry || !entry[3]) return icao;
     let name = entry[3];
-    // Drop trailing " Airport"
-    name = name.replace(/\s+Airport$/i, "");
+    // Ensure it ends with " Airport" (append only if not already present) so
+    // the readback says "cleared to Princess Juliana International Airport".
+    if (!/\s+Airport$/i.test(name)) {
+      name = name + " Airport";
+    }
     return name;
   }
 
@@ -3191,11 +3234,20 @@
   // even though the aircraft is flying a published climb-via SID. RADAR VECTORS
   // amendments are excluded — that's a no-SID local procedure.
   function effectiveClimbViaSid() {
+    // On an amended clearance whose amended route begins with a SID, the
+    // cleared SID is that amended SID — NOT the filed SID still sitting in the
+    // SID field. Prefer the amended SID so climb-via phrasing keys on what the
+    // pilot is actually flying (filed REGAE2 -> amended SNAPR2). Falls back to
+    // the SID field when there's no amended SID.
+    const amended = !!state.checks["route-amended"];
+    const amendedText = (getField("amendedRoute") || "").trim().toUpperCase();
+    if (amended && amendedText && amendedText !== "RADAR VECTORS") {
+      const firstTok = amendedText.split(/\s+/).filter(Boolean)[0] || "";
+      if (isStar(firstTok)) return isClimbViaSid(firstTok);
+    }
     const sidField = getField("sid").trim();
     if (sidField) return isClimbViaSid(sidField);
-    const amended = !!state.checks["route-amended"];
     if (!amended) return false;
-    const amendedText = (getField("amendedRoute") || "").trim().toUpperCase();
     if (!amendedText || amendedText === "RADAR VECTORS") return false;
     const firstTok = amendedText.split(/\s+/).filter(Boolean)[0] || "";
     if (!isStar(firstTok)) return false;
