@@ -934,7 +934,7 @@
 </div>
 <div class="app">
   <header>
-    <h1>CD Pre-Clearance Checklist<span class="tag" style="background:#3a2d12;color:var(--warn);">SWEATBOX</span><span class="tag" style="background:#12331f;color:var(--success);" title="Build identifier - confirms which file version is loaded">BUILD 34.08</span><span id="revision-badge" class="tag" style="background:transparent;border:1px solid var(--border);color:var(--text-faint);" title="SID/STAR revision data status">rev: n/a</span></h1>
+    <h1>CD Pre-Clearance Checklist<span class="tag" style="background:#3a2d12;color:var(--warn);">SWEATBOX</span><span class="tag" style="background:#12331f;color:var(--success);" title="Build identifier - confirms which file version is loaded">BUILD 34.09</span><span id="revision-badge" class="tag" style="background:transparent;border:1px solid var(--border);color:var(--text-faint);" title="SID/STAR revision data status">rev: n/a</span></h1>
     <div class="stats">
       Cleared today: <b id="stat-today">0</b> &nbsp;&nbsp; Session: <b id="stat-session">0</b>
       &nbsp;&nbsp;
@@ -5962,7 +5962,17 @@
         const isInDB = (c) => typeof AIRPORTS !== "undefined" && AIRPORTS && AIRPORTS[c];
         const isAirportAny = (c) => isKnownAirport(c) || isInDB(c);
         const airports = [];
-        for (const t of dtoks) {
+        // Skip the callsign token (dtoks[0]) when hunting for airports. A
+        // callsign like "AAY353" strips to "AAY", and recoverAirport's 3-letter
+        // rescue turns "AAY" into the real ICAO "DAAY", which gets assigned as
+        // DEP, shoving the true DEP into DEST and dropping the true DEST. The
+        // callsign is already known here, so never mine its token for an airport.
+        const csTok = (dtoks[0] || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+        for (let di = 0; di < dtoks.length; di++) {
+          const t = dtoks[di];
+          if (di === 0) continue;
+          const tClean = t.toUpperCase().replace(/[^A-Z0-9]/g, "");
+          if (tClean && tClean === csTok) continue;
           const up = t.toUpperCase().replace(/[^A-Z]/g, "");
           // Try a fused PAIR first: 8- or 9-letter token that splits into two
           // real airports. This must run BEFORE the single-airport recovery
