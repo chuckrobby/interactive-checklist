@@ -66,6 +66,43 @@ def _log_capture(body):
         # Never let a logging problem affect the relay's real job.
         print(f"[clip_server] (capture log write failed: {e})")
  
+# --- SID/STAR revision data ---
+_REV_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cycle_check_prev.json")
+_rev_lock = threading.Lock()
+_rev_cache = {"mtime": None, "payload": None}
+
+def _load_revisions():
+    import json
+    try:
+        mtime = os.path.getmtime(_REV_PATH)
+    except OSError:
+        return {"cycle": None, "revisions": {}}
+    with _rev_lock:
+        if _rev_cache["mtime"] == mtime and _rev_cache["payload"] is not None:
+            return _rev_cache["payload"]
+        try:
+            with open(_REV_PATH, "r", encoding="utf-8") as fh:
+                raw = json.load(fh)
+            revisions = {}
+            for apt, procs in (raw.get("results") or {}).items():
+                if not procs:
+                    continue
+                m = {}
+                for base, pdata in procs.items():
+                    r = pdata.get("revision") if isinstance(pdata, dict) else None
+                    if isinstance(r, int):
+                        m[base] = r
+                if m:
+                    revisions[apt] = m
+            payload = {"cycle": raw.get("cycle"), "revisions": revisions}
+            _rev_cache["mtime"] = mtime
+            _rev_cache["payload"] = payload
+            return payload
+        except Exception as e:
+            print(f"[clip_server] (revisions load failed: {e})")
+            return {"cycle": None, "revisions": {}}
+
+
 class Handler(BaseHTTPRequestHandler):
  
     # ------------------------------------------------------------------ POST
@@ -108,6 +145,16 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
             self.wfile.write(text.encode("utf-8"))
+        elif self.path == "/revisions":
+            import json
+            payload = _load_revisions()
+            body = json.dumps(payload).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
         elif self.path == "/":
             self._ok("clip_server OK")
         else:
