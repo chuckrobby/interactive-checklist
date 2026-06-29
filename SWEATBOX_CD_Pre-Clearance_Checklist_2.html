@@ -934,7 +934,7 @@
 </div>
 <div class="app">
   <header>
-    <h1>CD Pre-Clearance Checklist<span class="tag" style="background:#3a2d12;color:var(--warn);">SWEATBOX</span><span class="tag" style="background:#12331f;color:var(--success);" title="Build identifier - confirms which file version is loaded">BUILD 34.11</span><span id="revision-badge" class="tag" style="background:transparent;border:1px solid var(--border);color:var(--text-faint);" title="SID/STAR revision data status">rev: n/a</span></h1>
+    <h1>CD Pre-Clearance Checklist<span class="tag" style="background:#3a2d12;color:var(--warn);">SWEATBOX</span><span class="tag" style="background:#12331f;color:var(--success);" title="Build identifier - confirms which file version is loaded">BUILD 34.17</span><span id="revision-badge" class="tag" style="background:transparent;border:1px solid var(--border);color:var(--text-faint);" title="SID/STAR revision data status">rev: n/a</span></h1>
     <div class="stats">
       Cleared today: <b id="stat-today">0</b> &nbsp;&nbsp; Session: <b id="stat-session">0</b>
       &nbsp;&nbsp;
@@ -2291,7 +2291,7 @@
 
     const rulesUC = (state.fields.rules || "IFR").toUpperCase();
 
-    // Plain VFR departure: fixed "maintain VFR at or below 2500" advisory,
+    // Plain VFR departure: fixed "maintain VFR at or below 2000" advisory,
     // then departure frequency, then discrete squawk. No route, SID, or
     // cruise-altitude structure.
     if (rulesUC === "VFR") {
@@ -2305,7 +2305,7 @@
         return "<b>" + cs + "</b>, squawk <b>" + sq + "</b>, call for taxi. " +
           "Information " + atisWord() + " is current. Expect runway <b>" + rwy + "</b>.";
       }
-      return "<b>" + cs + "</b>, maintain VFR at or below 2500. " +
+      return "<b>" + cs + "</b>, maintain VFR at or below 2000. " +
         "Departure frequency " + freq + ". Squawk <b>" + sq + "</b>.";
     }
 
@@ -3185,6 +3185,16 @@
   // /G, /R, /Q, /L all imply RNAV. Others (X, T, U, D, B, A, W, I) do not.
   const RNAV_CAPABLE_EQUIP = new Set(["G", "R", "Q", "L"]);
 
+  // FAA slash-code equipment letters that denote RVSM capability (cleared above
+  // FL280 into FL290-FL410). Per the training manual suffix table, the RVSM
+  // group is /H, /W, /Z, /L. Everything else (including /G — GNSS but No RVSM —
+  // and /A) is non-RVSM and capped at FL280. A blank suffix is "unknown" and
+  // not capped. NOTE: RVSM capability is a SEPARATE axis from RNAV capability;
+  // /G is RNAV-capable but NOT RVSM-capable, which is why this set differs from
+  // RNAV_CAPABLE_EQUIP above.
+  const RVSM_CAPABLE_EQUIP = new Set(["H", "W", "Z", "L"]);
+  const isRvsmCapable = (s) => RVSM_CAPABLE_EQUIP.has((s || "").trim().toUpperCase());
+
   // KFLL SIDs that have published altitude restrictions, so "climb via the SID"
   // phraseology applies. SIDs not in this set get a plain "maintain [altitude]".
   const CLIMB_VIA_SIDS = new Set([
@@ -3662,13 +3672,14 @@
     const filedRaw = getField("filed").trim();
     const altToCheck = filedRaw || getField("final");
 
-    // HARD RULE: any equipment suffix other than "L" caps the aircraft at
-    // FL280. (Suffix L denotes RVSM-capable; without it the aircraft can't be
-    // cleared into RVSM airspace FL290-FL410, so FL280 is the practical ceiling
-    // here.) We check BOTH filed and final altitudes and flag if either exceeds
-    // FL280. A blank suffix is treated as "unknown" and not flagged. This check
-    // takes precedence over the hemispheric-parity verdict because a ceiling
-    // bust is a more fundamental problem than wrong-direction parity.
+    // HARD RULE: an equipment suffix that is NOT RVSM-capable caps the aircraft
+    // at FL280. (RVSM-capable suffixes are /H /W /Z /L per the manual; without
+    // RVSM the aircraft can't be cleared into FL290-FL410, so FL280 is the
+    // practical ceiling.) We check BOTH filed and final altitudes and flag if
+    // either exceeds FL280. A blank suffix is treated as "unknown" and not
+    // flagged. This check takes precedence over the hemispheric-parity verdict
+    // because a ceiling bust is a more fundamental problem than wrong-direction
+    // parity.
     const suffix = getField("equip").trim().toUpperCase();
     // REVERT PATH: the FL280 cap below only fires while the suffix is non-L. If
     // the controller later fixes the suffix to L (RVSM-capable) or clears it, the
@@ -3677,7 +3688,7 @@
     // (e.g. a /Z plan corrected to /L kept FL280 instead of restoring FL320).
     // Only revert if Final Alt still equals OUR last auto-fill; if the controller
     // typed their own Final, leave it (preserve manual edits).
-    if (!suffix || suffix === "L") {
+    if (!suffix || isRvsmCapable(suffix)) {
       const finalEl = document.getElementById("f-final");
       const lastAuto = state.autofills && state.autofills.final;
       const currentFinal = finalEl ? finalEl.value.trim() : "";
@@ -3692,7 +3703,7 @@
         }
       }
     }
-    if (suffix && suffix !== "L") {
+    if (suffix && !isRvsmCapable(suffix)) {
       const CEILING = 28000; // FL280
       const filedFt = parseAltitude(filedRaw);
       const finalFt = parseAltitude(getField("final").trim());
@@ -5789,7 +5800,13 @@
         // title, and the ROUTE line got parsed as the data row instead. So we now
         // accept the row on (callsign-shaped first token AND airport), OR on the
         // older (airport AND type) signal -- whichever fires.
-        const l0hasCsFirst = /^[A-Z]{2,4}\d{1,4}$/i.test(l0toks[0] || "");
+        // Callsign-shaped first token: airline form (2-4 letters + flight
+        // number, e.g. AAY353) OR US tail number (N + digit + up to 4 alnum,
+        // e.g. N77FT). The N-number shape must be accepted here or a GA data
+        // row gets mis-detected as "no data row" and skipped, even though the
+        // parse path below already handles N-numbers — keep the two in sync.
+        const l0hasCsFirst = /^[A-Z]{2,4}\d{1,4}[A-Z]?$/i.test(l0toks[0] || "") ||
+                             /^N[0-9][0-9A-Z]{0,4}$/i.test(l0toks[0] || "");
         const l0looksLikeDataRow = (l0hasAirport && l0hasCsFirst) ||
                                    (l0hasAirport && l0hasType);
         if ((l0isTitle || !l0looksLikeDataRow) && origLines.length > 1) {
@@ -5812,7 +5829,8 @@
       const firstClean = firstLine.replace(/[=~_]/g, " ").replace(/\s+/g, " ").trim();
       const firstToks = firstClean.split(/\s+/);
       const looksLikeDataRow =
-        /^[A-Z]{2,3}\d{1,4}$/i.test(firstToks[0] || "") &&
+        (/^[A-Z]{2,4}\d{1,4}[A-Z]?$/i.test(firstToks[0] || "") ||
+         /^N[0-9][0-9A-Z]{0,4}$/i.test(firstToks[0] || "")) &&
         firstToks.some(t => /^[A-Z]{4}\.?$/.test(t.replace(/[^A-Za-z.]/g, "")));
       if (pipeCount >= 2 && looksLikeDataRow) {
         // PIPED narrow capture -- split explicitly on pipes. Strip trailing
@@ -5861,7 +5879,8 @@
           .replace(/[=~_]/g, " ")                  // column-rule artifacts
           .replace(/\s+/g, " ").trim();
         const toks = cleaned.split(/\s+/);
-        const looksCs   = /^[A-Z]{2,4}\d{1,4}$/i.test(toks[0] || "");
+        const looksCs   = /^[A-Z]{2,4}\d{1,4}[A-Z]?$/i.test(toks[0] || "") ||
+                          /^N[0-9][0-9A-Z]{0,4}$/i.test(toks[0] || "");
         // ICAO signal: either a clean 4-letter token OR a fused 8/9-letter
         // token that splits cleanly into two known airports (covers the
         // CKDPAKFLL case where OCR welded DEP and DEST cells together).
@@ -5952,7 +5971,7 @@
         // a 2-3 letter ICAO prefix + flight number; US registrations are "N" +
         // a digit + up to 4 more alphanumerics (interior may be OCR-garbled, so
         // we accept any alnum body here and let repairCallsign resolve it).
-        if (/^[A-Z]{2,3}\d{1,4}$/i.test(dtoks[0]) ||
+        if (/^[A-Z]{2,4}\d{1,4}[A-Z]?$/i.test(dtoks[0]) ||
             /^N[0-9A-Z]{1,5}$/i.test(dtoks[0])) {
           out.callsign = repairCallsign(dtoks[0]);
         }
@@ -6862,7 +6881,7 @@
     // exactly as in the header-anchored and content-recovery paths.
     if (out.callsign === "") {
       const t0 = (toks[0] || "").toUpperCase();
-      const t0IsAirline = /^[A-Z]{2,4}\d{1,4}$/.test(t0);
+      const t0IsAirline = /^[A-Z]{2,4}\d{1,4}[A-Z]?$/.test(t0);
       // N-number shape, tolerant of OCR letter/digit confusion in the body.
       const t0IsNnum = /^N[0-9A-Z]{1,5}$/.test(t0);
       if (t0IsAirline || t0IsNnum) {
@@ -7811,8 +7830,13 @@
     // the assigned initial climb in the clearance" cue — it fires on every one
     // of those SIDs by design and says nothing about parse quality. Letting it
     // block auto-checks meant GLADZ4/DORRL2/REGAE2 never got pre-checked at all.
-    const finalEl = document.getElementById("f-final");
-    if (finalEl && finalEl.dataset.atcAssign === "1") return;
+    // NOTE (34.16): we intentionally do NOT bail here when Final Alt carries the
+    // atcAssign amber (Q77/FL280 amendment). That early return suppressed EVERY
+    // auto-check (type, dep/dest, SID, route, freq, release) over what is only an
+    // altitude amendment, leaving the controller to re-check everything by hand.
+    // The altitude auto-check is ALREADY independently guarded below (it is gated
+    // on !state.checks["altitude-amended"] and on !oneWayBad/!ceilingBust), so an
+    // amendment still correctly blocks the altitude box without blocking the rest.
 
     if (!state.autoChecks) state.autoChecks = {};
     if (!state.manualChecks) state.manualChecks = {};
@@ -7871,7 +7895,7 @@
       const oneWayBad = oneWay && oneWay.isCorrect === false;
       // FL280 RVSM ceiling: non-L suffix above FL280 is a hard flag.
       const suffix = getField("equip").trim().toUpperCase();
-      const ceilingBust = suffix && suffix !== "L" && altFt !== null && altFt > 28000;
+      const ceilingBust = suffix && !isRvsmCapable(suffix) && altFt !== null && altFt > 28000;
       // A parseable altitude with no hard-error reason. checkAltitude returns
       // {error} when it can't run, {reason} for a malformed (non-1000ft) value,
       // and an unflagged {valid} verdict otherwise — a false `valid` with NO
